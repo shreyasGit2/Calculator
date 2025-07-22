@@ -1,21 +1,34 @@
-let currentInput ='';
-function press(value)
+let currentInput = '';
+
+function press(value) 
 {
   currentInput += value;
   document.querySelector('.displayElement').value = currentInput;
 }
-function calculate(ntg)
+
+function deleteLast() 
 {
-  currentInput = eval(currentInput);
+  currentInput = currentInput.slice(0, -1);
   document.querySelector('.displayElement').value = currentInput;
 }
-function clearDisplay()
+
+function clearDisplay() 
 {
   currentInput = '';
   document.querySelector('.displayElement').value = '';
 }
-function deleteLast() {
-  const display = document.querySelector('.displayElement');
-  display.value = display.value.slice(0, -1);
+
+function calculate() 
+{
+  try 
+  {
+    currentInput = eval(currentInput).toString();
+    document.querySelector('.displayElement').value = currentInput;
+  } 
+  catch (error) 
+  {
+    document.querySelector('.displayElement').value = 'Error';
+  }
 }
+
 
