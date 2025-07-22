@@ -1,0 +1,50 @@
+.first-line,
+.sec-line,
+.third-line,
+.fourth-line{
+  display: grid;
+  grid-template-columns: 35px 35px 35px 35px;
+  column-gap: 20px;
+  row-gap: 50px;
+  margin-bottom: 10px;
+}
+
+.buttons{
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  border-radius:15px;
+  border: none;
+  background-color: black;
+  color: white;
+  transition:pointer 1s
+}
+.buttons:hover{
+  cursor: pointer;
+}
+.buttons:active{
+  background-color: grey;
+}
+
+.displayElement{
+  width: 193px;
+  height: 25px;
+}
+
+.heading{
+  margin-left: 63px;
+  font-family: Arial;
+}
+.delete-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.delete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
